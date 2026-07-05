@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Denis Pajaziti - Cloud & AI Solutions Engineer. Designing and shipping cloud-native AI solutions on Microsoft Azure." />
+  <meta property="og:title" content="Denis Pajaziti - Cloud & AI Solutions Engineer" />
+  <meta property="og:description" content="8+ years of hands-on experience across cloud, AI, and full-stack development." />
+  <meta property="og:type" content="website" />
+  <title>Denis Pajaziti - Cloud &amp; AI Solutions Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-count mono" id="preloader-count">0</span>
+      <span class="preloader-label mono">initializing…</span>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Film grain + progress -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand mono" href="#hero" data-hover>dp<span class="brand-dot">.</span></a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#about" data-hover><span class="mono">01.</span> About</a>
+      <a href="#experience" data-hover><span class="mono">02.</span> Journey</a>
+      <a href="#projects" data-hover><span class="mono">03.</span> Work</a>
+      <a href="#skills" data-hover><span class="mono">04.</span> Arsenal</a>
+      <a href="#contact" class="nav-cta" data-hover>Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero">
+      <canvas id="webgl" aria-hidden="true"></canvas>
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-kicker mono" data-hero-fade>&lt;/&gt; Hello world, I am</p>
+        <h1 class="hero-name" id="hero-name" aria-label="Denis Pajaziti">Denis Pajaziti</h1>
+        <div class="hero-roles" data-hero-fade>
+          <span class="hero-roles-static mono">$&gt;</span>
+          <span id="typewriter"></span><span class="caret" aria-hidden="true"></span>
+        </div>
+        <p class="hero-tagline" data-hero-fade>
+          I build <strong>cloud-native AI systems</strong> on Microsoft Azure -
+          from the first prototype to production at scale.
+          Self-taught, certified, and obsessed with automation.
+        </p>
+        <div class="hero-actions" data-hero-fade>
+          <a class="btn btn-primary magnetic" href="#projects" data-hover>
+            Explore my work <span aria-hidden="true">↓</span>
+          </a>
+          <a class="btn btn-ghost magnetic" href="#contact" data-hover>Let's talk</a>
+        </div>
+      </div>
+
+      <div class="hero-bottom" data-hero-fade>
+        <div class="hero-meta mono">
+          <span>Based in Germany</span>
+          <span class="hero-meta-sep">///</span>
+          <span>Cloud &amp; AI Engineering</span>
+          <span class="hero-meta-sep">///</span>
+          <span>Available for remote work</span>
+        </div>
+        <a class="scroll-hint mono" href="#marquee" data-hover>scroll ↓</a>
+      </div>
+    </section>
+
+    <!-- ================= TECH MARQUEE ================= -->
+    <section id="marquee" class="marquee-section" aria-label="Technology stack">
+      <div class="marquee" data-direction="left">
+        <div class="marquee-track">
+          <!-- filled by JS, duplicated for seamless loop -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono section-index">01.</span> <span data-split>Who I am</span></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="about-intro reveal" data-hover>
+              <div class="portrait-ring">
+                <img src="assets/portrait.png" alt="Portrait of Denis Pajaziti" loading="lazy" />
+              </div>
+              <div class="about-intro-meta">
+                <span class="intro-name">Denis Pajaziti</span>
+                <span class="intro-role mono">cloud &amp; ai solutions engineer</span>
+              </div>
+            </div>
+            <p class="reveal">
+              I'm a <strong>self-taught engineer</strong> who traded the classroom for
+              the terminal. Over <strong>8+ years</strong> I went from building websites
+              to running production Kubernetes clusters, founding my own IT company,
+              and leading development teams.
+            </p>
+            <p class="reveal">
+              Today I'm a <strong>Solutions Developer at Aithoria</strong>, where I design
+              and ship AI-powered products on Microsoft Azure - enterprise chat platforms,
+              retrieval-augmented generation pipelines, and the cloud infrastructure
+              underneath.
+            </p>
+            <p class="reveal">
+              No degree. No shortcuts. Just <strong>shipped software</strong>, a
+              <strong>Microsoft Azure AI Engineer certification</strong>, and a track
+              record that speaks for itself.
+            </p>
+            <div class="about-stats">
+              <div class="stat reveal" data-hover>
+                <span class="stat-value" data-count="8">0</span><span class="stat-suffix">+</span>
+                <span class="stat-label">years shipping</span>
+              </div>
+              <div class="stat reveal" data-hover>
+                <span class="stat-value" data-count="7">0</span>
+                <span class="stat-label">roles &amp; companies</span>
+              </div>
+              <div class="stat reveal" data-hover>
+                <span class="stat-value" data-count="1">0</span>
+                <span class="stat-label">company founded</span>
+              </div>
+              <div class="stat reveal" data-hover>
+                <span class="stat-value" data-count="100">0</span><span class="stat-suffix">%</span>
+                <span class="stat-label">self-taught</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="terminal reveal" aria-label="Terminal introduction">
+            <div class="terminal-bar">
+              <span class="t-dot t-red"></span>
+              <span class="t-dot t-yellow"></span>
+              <span class="t-dot t-green"></span>
+              <span class="terminal-title mono">denis@azure ~ zsh</span>
+            </div>
+            <div class="terminal-body mono" id="terminal-body"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE (horizontal scroll) ================= -->
+    <section id="experience" class="experience-section">
+      <div class="experience-pin">
+        <div class="container">
+          <h2 class="section-title"><span class="mono section-index">02.</span> <span data-split>The journey</span></h2>
+          <p class="section-sub mono">drag through 8+ years - scroll to travel →</p>
+        </div>
+        <div class="h-track" id="h-track">
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2025 - now</span>
+            <h3>Solutions Developer</h3>
+            <span class="xp-company">Aithoria</span>
+            <p>Designing and shipping cloud-based AI solutions on Microsoft Azure - enterprise chat platforms, LLM integrations, and custom tooling.</p>
+            <ul class="tags"><li>Azure</li><li>AI / LLM</li><li>TypeScript</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2023 - 2024</span>
+            <h3>Head of Software Development</h3>
+            <span class="xp-company">CI Development GmbH</span>
+            <p>Led the dev team: sprint planning, delivery, and end-to-end ownership of cloud infrastructure and CI/CD pipelines.</p>
+            <ul class="tags"><li>Leadership</li><li>Kubernetes</li><li>CI/CD</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2022 - 2024</span>
+            <h3>Founder &amp; CEO</h3>
+            <span class="xp-company">DP - IT Solutions e.K.</span>
+            <p>Founded and ran an IT services company - consulting, infrastructure, and support for private and commercial clients.</p>
+            <ul class="tags"><li>Entrepreneurship</li><li>IT Services</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2023</span>
+            <h3>Cloud Operations Specialist</h3>
+            <span class="xp-company">CI Development GmbH</span>
+            <p>Operated production Kubernetes; built pipelines, Infrastructure-as-Code, and automation to kill manual ops.</p>
+            <ul class="tags"><li>Kubernetes</li><li>IaC</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2022</span>
+            <h3>Senior Consultant</h3>
+            <span class="xp-company">Pexon Consulting GmbH</span>
+            <p>Advised enterprise clients on cloud architecture and delivery strategy.</p>
+            <ul class="tags"><li>Consulting</li><li>Cloud</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2021 - 2022</span>
+            <h3>Cloud Developer</h3>
+            <span class="xp-company">ADITO Software GmbH</span>
+            <p>Built cloud-based features and services for a commercial CRM platform.</p>
+            <ul class="tags"><li>Cloud Dev</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2020 - 2021</span>
+            <h3>IT Systems Administrator</h3>
+            <span class="xp-company">09 Media GmbH</span>
+            <p>Ran internal IT systems, servers, and infrastructure.</p>
+            <ul class="tags"><li>SysAdmin</li></ul>
+          </article>
+          <article class="xp-card" data-hover>
+            <span class="xp-year mono">2016</span>
+            <h3>Full-Stack Developer</h3>
+            <span class="xp-company">klein,laut</span>
+            <p>First professional role - full-stack web apps. Where it all started.</p>
+            <ul class="tags"><li>Origin story</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono section-index">03.</span> <span data-split>Selected work</span></h2>
+        <p class="section-sub mono">representative projects from my professional work</p>
+
+        <div class="projects-grid">
+          <article class="project-card tilt" data-hover>
+            <div class="project-glow" aria-hidden="true"></div>
+            <span class="project-num mono">/01</span>
+            <h3>Enterprise AI Chat Platform</h3>
+            <p>
+              Multi-tenant LLM chat platform on Azure - custom branding per customer,
+              RAG over private knowledge bases, agent workflows, and SSO. Built on
+              Azure OpenAI with CI/CD to containerized environments.
+            </p>
+            <ul class="tags">
+              <li>Azure OpenAI</li><li>RAG</li><li>Node.js</li><li>Docker</li><li>Azure DevOps</li>
+            </ul>
+          </article>
+
+          <article class="project-card tilt" data-hover>
+            <div class="project-glow" aria-hidden="true"></div>
+            <span class="project-num mono">/02</span>
+            <h3>Document Intelligence Pipeline</h3>
+            <p>
+              Automated ingestion pipeline that turns unstructured customer documents
+              into searchable AI knowledge - Azure AI Search skillsets, embeddings,
+              chunking strategies, and vector indexes.
+            </p>
+            <ul class="tags">
+              <li>Azure AI Search</li><li>Embeddings</li><li>Python</li><li>Functions</li>
+            </ul>
+          </article>
+
+          <article class="project-card tilt" data-hover>
+            <div class="project-glow" aria-hidden="true"></div>
+            <span class="project-num mono">/03</span>
+            <h3>GitOps Kubernetes Platform</h3>
+            <p>
+              Production-grade Kubernetes platform with fully automated deployments -
+              Infrastructure-as-Code, secrets management, observability stack, and
+              pipelines that took releases from hours to minutes.
+            </p>
+            <ul class="tags">
+              <li>Kubernetes</li><li>Terraform</li><li>GitOps</li><li>Linux</li>
+            </ul>
+          </article>
+
+          <article class="project-card tilt" data-hover>
+            <div class="project-glow" aria-hidden="true"></div>
+            <span class="project-num mono">/04</span>
+            <h3>Managed IT for SMBs</h3>
+            <p>
+              As founder of DP - IT Solutions: designed, deployed, and operated complete
+              IT environments for small businesses - from server rooms and networking
+              to backup strategies and support.
+            </p>
+            <ul class="tags">
+              <li>Windows Server</li><li>Networking</li><li>Backup &amp; DR</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono section-index">04.</span> <span data-split>The arsenal</span></h2>
+        <div class="skills-icons" id="skills-icons">
+          <!-- filled by JS from data -->
+        </div>
+
+        <div class="cert-banner reveal" data-hover>
+          <div class="cert-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+              <path d="m8.5 13.5-2 7L12 18l5.5 2.5-2-7" />
+            </svg>
+          </div>
+          <div>
+            <strong>Microsoft Certified: Azure AI Engineer Associate</strong>
+            <span class="cert-meta mono">Issued Jul 2025 · Credential ID 03E575-F6A8D1</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact">
+      <div class="contact-orb" aria-hidden="true"></div>
+      <div class="container">
+        <p class="contact-kicker mono reveal">05. What's next?</p>
+        <h2 class="contact-title" data-split>Let's build something.</h2>
+        <p class="contact-lead reveal">
+          I'm open to interesting projects and opportunities - especially where
+          cloud infrastructure meets applied AI. Remote-first, always curious.
+        </p>
+        <div class="contact-actions reveal">
+          <a class="btn btn-primary btn-lg magnetic" href="mailto:denis.pajaziti.bus@proton.me" data-hover>
+            Send me a mail ✉
+          </a>
+          <a class="btn btn-ghost btn-lg magnetic" href="https://linkedin.com/in/denis-pajaziti" target="_blank" rel="noopener" data-hover>
+            Connect on LinkedIn →
+          </a>
+        </div>
+        <button class="email-copy mono reveal" id="email-copy" data-hover
+                title="Copy address to clipboard" type="button">
+          denis.pajaziti.bus@proton.me <span aria-hidden="true">⧉</span>
+        </button>
+        <div class="toast mono" id="toast" role="status">copied to clipboard ✔</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© <span id="year"></span> denis pajaziti · psst: try ↑↑↓↓←→←→BA</p>
+  </footer>
+
+  <!-- Libraries (UMD globals) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
